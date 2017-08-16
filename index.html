@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+	</head>
+
+	<body>
+
+	</body>
+
+	<script type="text/javascript">
+		var col = 50,
+			row = 50,
+			w = 900,
+			h = 900,
+			time = 60,
+			num = -1;
+
+		var gameMap = null;
+		showMap();
+
+		function showMap() {
+			var c = document.body.childNodes;
+			//清除子节点
+			for(var i = c.length - 1; i >= 0; i--) {
+				document.body.removeChild(c[i]);
+			}
+			/*
+			 * 创建div元素
+			 */
+			gameMap = document.createElement('div')
+			gameMap.style.width = w + 'px';
+			gameMap.style.height = h + 'px';
+			gameMap.style.border = '1px solid red';
+			gameMap.style.position = 'relative';
+			/*
+			 * 显示到页面
+			 */
+			showBlock();
+
+			document.body.appendChild(gameMap);
+			var timer = setInterval(function() {
+
+				time--;
+				if(time < 0) {
+					alert('一共过了' + num + '关');
+					clearInterval(timer);
+					time = 60;
+					num = -1;
+					col = 50;
+					row = 50;
+
+//										showMap();
+				}
+			}, 1000);
+
+		}
+
+		function showBlock() {
+			//取所有子节点
+			var c = gameMap.childNodes;
+			//清除子节点
+			for(var i = c.length - 1; i >= 0; i--) {
+				gameMap.removeChild(c[i]);
+			}
+			num++;
+			//随机颜色避免掉随机黑色
+			var R = Math.floor(Math.random() * 236) + 20;
+			var G = Math.floor(Math.random() * 236) + 20;
+			var B = Math.floor(Math.random() * 236) + 20;
+			if(col != 10) {
+				col--;
+				row--;
+			}
+
+			var t = Math.floor(Math.random() * (row * col));
+			//生成子节点
+			for(var i = 0; i < row; i++) {
+				for(var j = 0; j < col; j++) {
+
+					var childDiv = document.createElement('div')
+					childDiv.style.width = w / col + 'px';
+					childDiv.style.height = h / row + 'px';
+					childDiv.style.border = '1px solid #000';
+
+					childDiv.style.backgroundColor = 'rgb(' + R + ',' + G + ',' + B + ')';
+
+					childDiv.style.position = 'absolute';
+					//top值
+					childDiv.style.top = i * h / row + 'px';
+					//left
+					childDiv.style.left = j * w / col + 'px';
+					//显示随机数颜色
+					if(t == i * col + j) {
+
+						childDiv.style.backgroundColor = 'rgb(' + (R - 50) + ',' + (G - 50) + ',' + (B - 50) + ')';
+						//添加点击事件
+						childDiv.addEventListener('click', showBlock);
+
+					}
+
+					gameMap.appendChild(childDiv);
+				}
+			}
+
+		}
+	</script>
+
+</html>
