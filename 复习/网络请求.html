@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//发起ajax网络请求
+//			$.ajax();
+//			get方式请求
+			var getJson = 'http://japi.juhe.cn/joke/content/list.from?key=e032c005683b416b9a0ff9cd7b246138&page=2&pagesize=10&sort=asc&time=1418745237';
+			var script = document.createElement('iframe');
+			script.src = getJson;
+//			script.type = 'tetx/template';
+			script.id = 'myScript';
+			document.body.appendChild(script);
+//			var tex = document.getElementById('myScript').contentWindow.document;
+			var tex = window.frames["myScript"].contentWindow.document;
+			console.log(tex);
+			
+//			$.ajax({
+//				type: 'get',//'post'
+//				url: 'http://xxx.xxx.com/xxx',
+//				dataType: 'jsonp',
+//				async: false,
+//				success: function(res){
+//					
+//				},
+//				error: function(res){
+//					
+//				}
+//			});
+//			$.get(url,{},function(res){},'json');
+//			$.getJSON();
+//			
+//			
+//			$.post(url,{},function(res){},'json');
+//			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+//			document.write(tex);
+//			Ajax('get', getJson, '', success, failed);
+//			function success(data){
+//				console.log(data);
+//			}
+//			function failed(data){
+//				console.log(data);
+//			}
+//			function Ajax(type, url, data, success, failed){
+//			    // 创建ajax对象
+//			    var xhr = null;
+//			    if(window.XMLHttpRequest){
+//			        xhr = new XMLHttpRequest();
+//			    } else {
+//			        xhr = new ActiveXObject('Microsoft.XMLHTTP')
+//			    }
+//			 
+//			    var type = type.toUpperCase();
+//			    // 用于清除缓存
+//			    var random = Math.random();
+//			 
+//			    if(typeof data == 'object'){
+//			        var str = '';
+//			        for(var key in data){
+//			            str += key+'='+data[key]+'&';
+//			        }
+//			        data = str.replace(/&$/, '');
+//			    }
+//			 
+//			    if(type == 'GET'){
+//			        if(data){
+//			            xhr.open('GET', url + '?' + data, true);
+//			        } else {
+//			            xhr.open('GET', url + '?t=' + random, true);
+//			        }
+//			        xhr.send();
+//			 
+//			    } else if(type == 'POST'){
+//			        xhr.open('POST', url, true);
+//			        // 如果需要像 html 表单那样 POST 数据，请使用 setRequestHeader() 来添加 http 头。
+//			        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//			        xhr.send(data);
+//			    }
+//			 
+//			    // 处理返回数据
+//			    xhr.onreadystatechange = function(){
+//			        if(xhr.readyState == 4){
+//			            if(xhr.status == 200){
+//			                success(xhr.responseText);
+//			            } else {
+//			                if(failed){
+//			                    failed(xhr.status);
+//			                }
+//			            }
+//			        }
+//			    }
+//			}
+
+
+
+//		$.ajax({
+//				type:"get",
+//				url: getJson, 	 	
+//				data: {},
+//				dataType: 'script',
+//				success: function(data){
+//					console.log(data);
+//				},
+//				error: function(data){
+//					console.log(data);
+//				}
+//			});
+//			var getJson = 'data.js';
+//			$.get(getJson,{},function(res){
+////				console.log(res);
+//					console.log(123);
+//			},'jsonp');
+//		function callback(res){
+//			console.log(res);
+//		}
+
+		</script>
+		<!--<script src="http://192.168.1.108:8020/%E6%95%B0%E6%8D%AE%E8%AF%B7%E6%B1%82/data.js" type="text/javascript"></script>-->
+	</body>
+
+</html>

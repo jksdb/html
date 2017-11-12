@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="referrer" content="never"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			li{
+				/*float: left;*/
+				display: inline-block;
+			}
+			.ellipsis{
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			abbr[title], abbr[data-original-title] {
+			    cursor: pointer;
+			    border-bottom: none;
+			    text-decoration: none;
+			}
+			.song-list-box>div{
+				cursor: pointer;
+			}
+		</style>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://libs.cdnjs.net/dot/1.1.2/doT.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!---->
+			<div class="row">
+				<!--榜单导航-->
+				<div class="col-xs-3">
+					<ul id="navList" class="nav nav-pills nav-stacked text-center"></ul>
+				</div>
+				<!--歌曲列表-->
+				<div id="list" class="col-xs-9 song-list-box"></div>
+			</div>
+			
+		</div>
+		<!--音乐播放器-->
+		<div id="playerE"></div>
+	</body>
+	<script id="listT" type="text/template">	
+		{{ for(var i = 0; i < it.length; i++){ }}
+		<div class="col-sm-3 playSong" id="{{=it[i].song_id}}">
+	    <div class="thumbnail">
+	      <img src="{{=it[i].pic_big}}">
+	      <div class="caption">
+	        <h5 class="ellipsis"><abbr title="{{=it[i].title}}">{{=it[i].title}}</abbr></h5>
+	        <p class="ellipsis"><abbr title="{{=it[i].author}}">{{=it[i].author}}</abbr></p>
+	      </div>
+	    </div>
+	  </div>
+		{{ } }}
+	</script>
+	<script id="navListT" type="text/template">
+		{{ for(var i = 0; i < it.length; i++){ }}
+		<li role="presentation"><a href="javascript:;" id="{{=it[i].type}}">{{=it[i].title}}</a></li>
+		{{ } }}
+	</script>
+	<script id="playListT" type="text/template">
+		<ul id="playListBox" class="list-group media-list">
+			{{ if(it.length == 0){ }}
+				<p>播放列表没有内容。</p>
+			{{ }else{ }}
+				{{ for(var i = it.length-1; i >= 0; i--){ }}
+			  <li id="{{=it[i].songinfo.song_id}}" class="list-group-item media">
+			  	<div class="media-left media-middle">
+			      <img class="media-object" src="{{=it[i].songinfo.pic_small}}" alt="...">
+			    </div>
+			    <div class="media-body">
+			      <h4 class="media-heading">{{=it[i].songinfo.title}}</h4>
+			      <p>{{=it[i].songinfo.author}}</p>
+			    </div>
+			  </li>
+			  {{ } }}
+		  {{ } }}
+		</ul>
+	</script>
+	<script>
+		var jsonURL = 'http://tingapi.ting.baidu.com/v1/restserver/ting';
+		var bangdanList = [];
+		var song = new Object();
+		var songPlayList = [];
+		~(function(){
+			$.get('js/data.json',{},function(res){
+				var data = res.bangdan;
+				//1. 找到模板
+				var listT = document.getElementById('navListT');
+				//2. 拿到模板里的内容
+				var listTinnerText = listT.innerText;
+				//3. 用数据替换模板内容
+				var dom = doT.template(listTinnerText)(data);
+				//4. 页面渲染DOM
+				document.getElementById('navList').innerHTML = dom;
+				//点击事件绑定
+				document.getElementById('navList').addEventListener('click',function(e){
+					var el = isTarget(e.target,'navList','A',3);
+					if(!el){
+						return;
+					}
+					if(el.id < 0){
+						var data = songPlayList;
+						//1. 找到模板
+						var listT = document.getElementById('playListT');
+						//2. 拿到模板里的内容
+						var listTinnerText = listT.innerText;
+						//3. 用数据替换模板内容
+						var dom = doT.template(listTinnerText)(data);
+						//4. 页面渲染DOM
+						document.getElementById('list').innerHTML = dom;
+						document.getElementById('list').addEventListener('click',function(e){
+							var e = isTarget(e.target,'list','LI',3);
+							if(e){
+								playSong(e.id);
+							}
+						});
+						return;
+					}
+					showSongList(el.id);
+				});
+			},'json');
+		})()
+		function showSongList(type){
+			if( bangdanList[type]){
+				var data = bangdanList[type];
+				//1. 找到模板
+				var listT = document.getElementById('listT');
+				//2. 拿到模板里的内容
+				var listTinnerText = listT.innerText;
+				//3. 用数据替换模板内容
+				var dom = doT.template(listTinnerText)(data);
+				//4. 页面渲染DOM
+				document.getElementById('list').innerHTML = dom;
+				return;
+			}
+			$.get(jsonURL,{
+				method: 'baidu.ting.billboard.billList',
+				type: type,
+				size: '8',
+				offset: '0'
+			},function(res){
+				var data = res.song_list;
+				//1. 找到模板
+				var listT = document.getElementById('listT');
+				//2. 拿到模板里的内容
+				var listTinnerText = listT.innerText;
+				//3. 用数据替换模板内容
+				var dom = doT.template(listTinnerText)(data);
+				//4. 页面渲染DOM
+				document.getElementById('list').innerHTML = dom;
+				bangdanList[type] = data;
+			},'jsonp');
+			document.getElementById('list').onclick = function (e){
+				var el = isTarget(e.target,'list','col-sm-3 playSong',2);
+				if(el){
+					reordering(el.id);
+					playSong(el.id);
+				}
+			}
+		}
+		function reordering(id){
+			console.log(id);
+			if(song[id]){
+				var n = 0;
+				for(var i = 0; i < songPlayList.length; i++){
+					if(songPlayList[i].songinfo.song_id == id){
+						n = i;
+						break;
+					}
+				}
+				songPlayList.push(songPlayList[n]);
+				songPlayList.splice(n,1);
+			}
+		}
+		function playSong(id){
+			if(song[id]){
+				document.getElementById('playerE').innerHTML = '<audio src="'+song[id]+'" autoplay="autoplay"></audio>';
+				return;
+			}
+			else{
+				song[id] = '#';
+			}
+			$.get(jsonURL,{
+				method: "baidu.ting.song.play",
+				songid: id
+			},function(res){
+				song[id] = res.bitrate.file_link;
+				songPlayList[songPlayList.length] = res;
+				document.getElementById('playerE').innerHTML = '<audio src="'+song[id]+'" autoplay="autoplay"></audio>';
+			},'jsonp');
+		}
+		function isTarget(target,pId,tagName,n){
+			var t = target;
+			switch (n){
+				case 1:
+					while(target.id !== pId){
+						if(target.id === tagName){
+							return target;
+						}
+						
+						target = target.parentNode;
+					}
+					break;
+				case 2:
+					while(target.id !== pId){
+						if(target.className === tagName){
+							return target;
+						}
+						
+						target = target.parentNode;
+					}
+					break;
+				case 3:
+					while(target.id !== pId){
+						if(target.nodeName === tagName){
+							return target;
+						}
+						
+						target = target.parentNode;
+					}
+					break;
+			}
+			return false;
+		}
+	</script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</html>
