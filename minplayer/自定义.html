@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: #B30000;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+	<script type="text/javascript">
+		var div = document.getElementById('div');
+		var num = 0;
+		var timer = setInterval(function(){
+			num ++;
+			div.style.left = num + 'px';
+			if(num > 800){
+				clearInterval(timer);
+			}
+		},20);
+	</script>
+</html>

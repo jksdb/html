@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				text-align: center;
+				overflow-x: hidden;
+			}
+			ul{
+				list-style: none;
+			}
+			.header{
+				width: 100%;
+				height: 44px;
+				line-height: 44px;
+				background-color: #f00;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+			.nav{
+				width: 100%;
+				height: 60px;
+				line-height: 60px;
+				background-color: #eee;
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				z-index: 999;
+			}
+			.nav li{
+				width: 20%;
+				height: 60px;
+				line-height: 60px;
+				float: left;
+			}
+			.nav li>label{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.mainBody{
+				width: 500%;
+				padding: 44px 0 60px 0;
+				transition: transform .4s ease;
+			}
+			.mainBody>li{
+				width: 20%;
+				float: left;
+			}
+			/*
+			 *	大于号(>)子代选择器
+			 * 	空格( )后代选择器
+			 *  加号(+)紧邻兄弟选择器
+			 * 	波浪线(~)所有兄弟选择器
+			 */
+			/*伪类选择器*/
+			input[type="radio"]{
+				/*在页面上不加载*/
+				display: none;
+			}
+			#radio1:checked~ul.mainBody{
+				transform: translateX(0);
+			}
+			#radio2:checked~ul.mainBody{
+				transform: translateX(-20%);
+			}
+			#radio3:checked~ul.mainBody{
+				transform: translateX(-40%);
+			}
+			#radio4:checked~ul.mainBody{
+				transform: translateX(-60%);
+			}
+			#radio5:checked~ul.mainBody{
+				transform: translateX(-80%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="header">
+				轮播图
+			</div>
+			<div class="nav">
+				<ul>
+					<li>
+						<label for="radio1">1</label>
+					</li>
+					<li>
+						<label for="radio2">2</label>
+					</li>
+					<li>
+						<label for="radio3">3</label>
+					</li>
+					<li>
+						<label for="radio4">4</label>
+					</li>
+					<li>
+						<label for="radio5">5</label>
+					</li>
+				</ul>
+			</div>
+			<input type="radio" id="radio1" name="radio"/>
+			<input type="radio" id="radio2" name="radio"/>
+			<input type="radio" id="radio3" name="radio"/>
+			<input type="radio" id="radio4" name="radio"/>
+			<input type="radio" id="radio5" name="radio"/>
+			<ul class="mainBody">
+				<li>
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" width="100%" height="auto"/>
+				</li>
+				<li>
+					<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=690556075,1313812309&fm=173&s=FDCA7A2BCED816CC7C301DC20100E0B1&w=218&h=146&img.JPEG" width="100%" height="auto"/>
+				</li>
+				<li>
+					<img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4055748092,812764414&fm=173&s=8CE27A2320E2A2FE1C3988960100C0C0&w=218&h=146&img.JPEG" width="100%" height="auto"/>
+				</li>
+				<li>
+					<img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=168301829,1222769605&fm=173&s=7207DD0C4C25B10D788AD541030030D9&w=218&h=146&img.JPEG" width="100%" height="auto"/>
+				</li>
+				<li>
+					<img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=204292838,1125939639&fm=173&s=29409A4E4132143543E0DCA803008050&w=218&h=146&img.JPEG" width="100%" height="auto"/>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
