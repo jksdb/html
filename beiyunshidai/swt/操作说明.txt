@@ -1,0 +1,4 @@
+1、将swt文件夹上传到网站根目录下
+
+2、将下列代码 替换 您网页上的商务通代码
+<script language="javascript" type="text/javascript" src="/swt/swt.js"></script>

@@ -1,0 +1,380 @@
+@charset "utf-8";
+/*index.html  开始*/
+/*banner*/
+.banner{position:relative;/*background-image:url(../images/banner1.jpg);background-position: center ;background-repeat:no-repeat;background-size:cover;*/width:100%;height:520px;}
+.banner .loop img{width:100%;min-width:1200px;}
+.aside{position:absolute;}
+.aside-item{margin-top:7px;height:90px;}
+/*container*/
+
+/*start-info  报班开始信息*/
+.start-info{text-align:center;}
+.start-title{font-size:28px;}
+.start-content{display:inline-block;}
+.start-content-item{width:390px;background:url(../images/list.png) 0 0 no-repeat;font-size:14px;}
+.start-content-item p{padding:8px 0;}
+.start-content-item span{padding-right:40px;}
+/*video-box  视频*/
+.video-box{height:440px;background:url(../images/video_back.jpg) 0 90px no-repeat;text-align:center;background-size:cover;}
+.video{margin-top:25px;}
+/*work-info  就业信息*/
+.work-info{height:370px;background:url(../images/work_back.png) right bottom no-repeat;}
+td{padding:0 44px;height:30px;position:relative;border-bottom:1px dashed #333;text-align:center;vertical-align:middle;overflow: hidden;}/*多页面使用 适用h5-tab*/
+.index-tab td{padding:0 34px;}/*主页*/
+.java-tab td{padding:0;width:112px;}
+.td-item{height:30px;position:relative;}
+.td-item p{line-height:30px;height:30px;}
+.change-bg-color{background:#145bb5;color:#fff;height:30px;}
+/*stu-works  学员作品*/
+.stu-works-item{
+	float: left;
+	padding-left: 7px;
+	padding-top: 20px;
+
+	transition:transform 0.8s linear  ;
+	-moz-transition:  transform 0.8s linear ; /* Firefox 4 */
+	-webkit-transition: transform 0.8s linear  ; /* Safari å’Œ Chrome */
+	-o-transition: transform 0.8s linear; /* Opera */
+}
+.stu-works-item:hover{
+	float: left;
+	padding-left: 7px;
+	padding-top: 20px;
+	transform:rotate(6deg) ;
+	-webkit-transform:rotate(6deg) ;
+	-moz-transform:rotate(6deg) ;
+	-ms-transform:rotate(6deg) ;
+	-o-transform:rotate(6deg) ;
+	box-shadow: 2px 2px 5px #967cc8;
+}
+
+/*hzqy 合作企业*/
+.company-box>div{float:left;}
+.company-box div img{width:190px;height:70px;}
+/* env-show   环境展示 */
+.slider{width:930px;height:350px;margin:0 auto;overflow: hidden;position:relative;}
+.slider-img-box{width:2480px;position:absolute;left:0;}
+.slider-img-box img{float:left;width:300px;height:350px;margin-right:10px;}
+/*公用*/
+.t-title{font-size:23px;color:#145bb5;}
+.t-text{font-size:14px;line-height:40px;}
+
+/* index 结束 */
+
+/* h5.html  开始 */
+.h5-bm01{width:100%;height:636px;background:url(../images/h5/01.jpg) center center no-repeat;background-size: cover;}
+.h5-bm02{width:100%;height:1048px;background:url(../images/h5/02.jpg) center center no-repeat;background-size: cover;}
+.h5-bm03{width:100%;height:893px;background:url(../images/h5/03.jpg) center center no-repeat;background-size: cover;}
+.dagang{background:url(../images/h5/dagangbg.jpg) center center no-repeat;width:100%;height:1103px;position:relative;}
+.text-box{width:1200px;position:absolute;top:250px;left:80px;height:115px;color:#fff;text-align:center;}
+.text-box-t{border-bottom:1px solid #fff;padding-left:20px;}
+.text-box-t .text-item{float:left;margin-left:65px;}
+.text-box-b{padding-left:90px;}
+.text-box-b .text-item{float:left;margin-left:60px;}
+.bg-white{height:82px;line-height:40px;background:url(../images/h5/dagang01.png) center 0 no-repeat;padding-right:2px;}
+.text-box-b .bg-white{background:url(../images/h5/dagang03.png) center 0 no-repeat;line-height: 122px;}
+.dagang .text-box .text-item-current1{color:orange;}
+.dagang .text-box .text-item-current1 .bg-white{ background:url(../images/h5/dagang02.png) center 0 no-repeat;}
+.dagang .text-box .text-item-current2{color:orange;}
+.dagang .text-box .text-item-current2 .bg-white{ background:url(../images/h5/dagang04.png) center 0 no-repeat;}
+.data-box{position:absolute;left:360px;top:620px;width:660px; color:#000;}
+.data-item h2{font-size:32px;text-align:center;padding-bottom:20px;}
+.data-item ul {list-style: cricle;}
+.h5-work-info{background-color:rgb(241,241,241);height:540px;}
+.h5-work-info .work-info{height:485px;}
+.h5-work-info .tab td{border:0;}
+.work-info-title{text-align:center;padding:40px 0 30px;}
+.bg-blue{background:#dae2eb;}
+.online-bm{height:665px;background:url(../images/h5/online_bm_bg.jpg) 0 0 no-repeat;}
+.online-bm-content{width:690px;padding-left:450px;padding-top:100px;height:490px;color:#fff;}
+.online-bm-content h3{border-bottom:1px solid #fff;}
+.online-bm-content p{padding-top:28px;font-size:16px;}
+.online-bm-content p i{padding:0 50px;}
+.online-bm-content p a{display:inline-block;border:1px solid #c3be02;color:#c3be02;padding:3px 13px;border-radius:20px;}
+.zuopin{height:800px;background:url(../images/h5/zuopinbg.jpg) center center no-repeat;}
+.zp-content{padding-top:200px;}
+.zp-content img{width:345px;height:538px;margin:0 25px;}
+.hzqy .font58{padding:80px 0;text-align:center;}
+
+/* h5.html  结束 */
+
+/* java.html  开始 */
+/* 课程大纲和学生作品 */
+.java-bm01{width:100%;height:353px;background:url(../images/java/01.jpg) center center no-repeat;background-size:cover;}
+.java-bm02{width:100%;height:315px;background:url(../images/java/02.jpg) center center no-repeat;background-size:cover;}
+.java-bm03{width:100%;height:729px;background:url(../images/java/03.jpg) center center no-repeat;background-size:cover;}
+.java-bm04{width:100%;height:876px;background:url(../images/java/04.jpg) center center no-repeat;background-size:cover;}
+.kezuo{width:100%;height:1418px;background:url(../images/java/bg03.jpg) 0 0 repeat-x;}
+.kecheng{padding-top:160px;}
+.kecheng-nav td{width:125px;height:135px;padding:0 5px;background:#3eade2;border-radius:20px;text-align:center;color:#fff;font-size:14px;}
+.kecheng-nav  .td-current{background:#0CA1E8;font-size:16px;border:1px solid #04BFF7;}
+.kecheng-content{width:1000px;height:280px;background:#0CA1E8;border-radius:10px;margin:0 auto;color:#fff;box-sizing:border-box;padding:0 100px;}
+.kecheng-content h5{font-size:18px;padding:50px 0 30px;}
+.kecheng-content p{font-size:16px;text-indent: 2em;}
+.java-zuopin{padding-top:300px;}
+.java-zuopin .stu-works-item{margin-left:55px;padding-top:0;padding-left:0;}
+
+/*就业和开班信息*/
+.jykb{width:100%;height:1728px;background:url(../images/java/bg04.jpg) center center no-repeat;background-size:cover;font-size:16px;}
+.jiuye-base-info{padding-top:225px;}
+.jy-base-title{margin-top:20px;width:300px;height:310px;background:#027eee url(../images/java/title01.png) center no-repeat;}
+.jy-base-content{padding-top:20px;background:url(../images/java/bg05.png) 552px 0px no-repeat;}
+.jy-god-title{margin-top:20px;width:300px;height:310px;background:#ffd800 url(../images/java/title02.png) center center no-repeat;}
+.jy-god-content{background:url(../images/java/bg05.png) 552px 0px no-repeat;}
+.kaiban-info{padding-top:250px;}
+.kaiban-info>div{width:50%;text-align:center;}
+.kaiban-info p {line-height:30px;}
+.btn{text-align:center;}
+/*java-last*/
+.java-last{position:relative;width:100%;height:827px;background:url(../images/java/bg06.jpg) center no-repeat;background-size:cover;}
+.java-last a{position:absolute;top:660px;left:50%;display:block;margin-left:-247px;}
+/* java.html  结束 */
+
+/*ui.html 开始*/
+.ui-bm01{height:519px;background:url(../images/ui/bg01.jpg) center center no-repeat;background-size:cover;}
+.ui-bm02{height:729px;background:url(../images/ui/bg02.jpg) center center no-repeat;background-size:cover;}
+.ui-bm03{height:641px;background:url(../images/ui/bg03.jpg) center center no-repeat;background-size:cover;}
+.ui-bm04{height:636px;background:url(../images/ui/bg04.jpg) center center no-repeat;background-size:cover;}
+/*为什么选择ui*/
+.why-ui{position:relative;height:1166px;background:url(../images/ui/bg05.jpg) center center no-repeat;background-size:cover;text-align:center;}
+.why-title{position:absolute;top:390px;height:240px;padding-left:150px;}
+.why-title-item{width:157px;height:240px;box-sizing:border-box;display:inline-block;margin-right:90px;}
+.why-title-item>p{position:relative;top:0;padding:50px 0;background:url(../images/ui/bg06.png) 0 0 no-repeat;font-size:30px;color:#fff;}
+.why-content{position:absolute;top:630px;width:1200px;}
+/*学生作品*/
+.ui-zuopin{padding-top:300px;height:946px;background:url(../images/ui/bg08.jpg) center center no-repeat;background-size:cover;text-align:center;}
+.ui-zuopin .warp div{display:inline-block;width:340px;height:778px;}
+.ui-zuopin .warp div>img{border-radius:5px;}
+/*开班信息  */
+.ui-kaiban-info{height:658px;background:url(../images/ui/bg09.jpg) center center no-repeat;background-size:cover;}
+.ui-kaiban-info .warp{padding-top:250px;text-align:center;}
+.ui-kaiban-info .warp>div{width:50%;text-align:center;}
+.ui-kaiban-info p {line-height:30px;}
+/*咨询热线*/
+.ui-tel{height:660px;background:url(../images/ui/bg10.jpg) center center  no-repeat;background-size:cover;text-align:center;}
+.ui-tel .warp{padding-top:400px;}
+.ui-tel .btn{padding:10px 0 0 14px;display:inline-block;width:524px;height:65px;background:#e8e8eb;border-radius:5px;}
+.ui-tel .btn p{width:510px;height:55px;border-radius:5px;background:#fff;font-size:20px;line-height:55px;}
+/*ui.html 结束*/
+
+/*vr.html 开始*/
+.vr-bm01{height:597px;background:url(../images/vr/01.jpg) center center no-repeat;background-size:cover;}
+.vr-bm02{height:573px;background:url(../images/vr/02.jpg) center center no-repeat;background-size:cover;}
+.vr-bm03{height:939px;background:url(../images/vr/03.jpg) center center no-repeat;background-size:cover;}
+.vr-bm04{height:1654px;background:url(../images/vr/04.jpg) center center no-repeat;background-size:cover;}
+.vr-bm05{height:870px;background:url(../images/vr/05.jpg) center center no-repeat;background-size:cover;}
+/*大纲 开班*/
+.vr-dgkb{height:1612px;background:#01040d;text-align:center;}
+.vr-dgkb h4{padding-top:100px;}
+.vr-dg{height:870px;}
+.dg-nav-item{margin-top:90px;display:inline-block;width:206px;height:206px;background:url(../images/vr/bg01.png) center center no-repeat;font-size:30px;color:#05028a;font-weight:bolder;line-height:206px;text-shadow:3px 3px 2px #fff;}
+.dg-content{height:534px;text-align:left;padding-left:400px;}
+.dg-content-item p{line-height:25px;height:25px;}
+.vr-kb .kaiban-info{padding-top:100px;}
+/* 热线 */
+.vr-tel{height:811px;background:url(../images/vr/06.jpg) center center no-repeat;background-size:cover;}
+.vr-tel .warp{position:relative;}
+.vr-tel h4{position:absolute;top:600px;left:184px;color:#fff200;font-size:32px;}
+/*vr.html 结束*/
+
+/*android.html 开始*/
+.android-bm01{height:743px;background:url(../images/android/01.jpg) center center no-repeat;background-size:cover;}
+.pk-box{height:1398px;background:url(../images/android/02.jpg) center center no-repeat;background-size:cover;}
+.pk-box .warp{padding-top:200px;}
+.pk-item{width:50%;font-size:16px;}
+.pk-item p,.pk-item h5{margin:0 auto;width:416px;}
+.pk-item h5{font-size:18px;font-weight:bold;text-align:center;}
+.pk-item p{text-indent:2em;line-height:30px;}
+.android-bm02{height:750px;background:url(../images/android/03.jpg) center center no-repeat;background-size:cover;}
+.android-dagang{height:1180px;}
+.android-dagang-title{padding-top:240px;height:220px;background:url(../images/android/04.png) center 90px no-repeat;text-align:center;color:#389300;}
+.android-dagang-title h1{font-size:88px;}
+.android-dagang-title p{font-size:25px;}
+.dagang-content{height:500px;background:url(http://s7.51cto.com/wyfs02/M01/12/56/wKiom1MEHQrRprMRAAUvp7CImA4419.jpg); background-size:cover;}
+.dagang-content-item{ margin-left:68px; padding-top:40px;}
+.dagang-content-item p{height:25px;line-height:25px;color:#000;}
+.dagang-nav-item{display:inline-block;margin-left:68px; padding-top:120px;width:213px;height:93px;font-size:25px;color:#fff;background:url(../images/android/05.png) 0 0 no-repeat;text-align:center;}
+/*学生作品*/
+.android-zuopin{margin-top:40px;height:944px;background:url(../images/android/06.jpg) center center no-repeat;background-size:cover;}
+.android-zuopin .warp{position:relative;height:944px;}
+.android-zp-title{position:absolute;top:110px;left:0;width:100%;text-align:center;color:#fff;}
+.android-zp-title h1{font-size:88px;}
+.android-zp-title p{font-size:25px;}
+.android-zp-content{position:absolute;top:350px;left:50%;margin-left:-517px;width:1034px;overflow: hidden;}
+.zp-content-item-box{position:relative;width:4275px;}
+.zp-content-item-box>ul{display:inline-block;}
+.zp-content-item{float:left;margin-right:30px;}
+.android-zuopin .warp a{position:absolute;top:60%;}
+.android-zuopin .warp a:hover{background:rgba(255,255,255,.3);}
+.prve{left:20px;}
+.next{left:1130px;}
+/*工作信息*/
+.android-work-info{height:700px;text-align:center;}
+.android-work-content{height:308px;background:url(../images/android/07.png) 730px 50px no-repeat;}
+.android-work-content .tab{display:inline-block;}
+.android-work-content .tab td{width:130px;border-bottom:1px solid #389300;padding:0;}
+.android-work-content .tab .change-bg-color{background:#389300;}
+/*开班信息*/
+.android-kaiban{height:658px;background:#389300;color:#fff;}
+.android-kaiban .warp{height:658px;background: url(../images/android/08.png) left bottom no-repeat}
+.android-kaiban-info{width:780px;margin-left:330px;text-align:center;}
+.android-kaiban-info h1{border-bottom:1px solid #fff;line-height:140px;}
+.android-kaiban-content>div{padding:0 20px;}
+.android-kaiban-content>div p{line-height:50px;}
+/*热线*/
+.android-tel .warp{background:url(../images/android/09.png) right bottom no-repeat;}
+.android-tel .tel-num{position:relative;height:720px;background:url(../images/android/text02.png) 130px 150px no-repeat;font-size:30px;}
+.android-tel .tel-num p{position:absolute;top:540px;left:320px;}
+/*android.html 结束*/
+
+/*about.html 关于我们  开始*/
+.header{background:#fff;}
+.body{background:url(../images/about/bg_body.jpg);}
+.about-bm01{height:350px;background:url(../images/about/01.jpg) center center no-repeat;background-size:cover;}
+.about-bm02{height:647px;background:url(../images/about/02.png) center center no-repeat;background-size:cover;}
+.about-bm03{position:relative;height:643px;background:url(../images/about/03.png) center center no-repeat;}
+.about-text-box{position:absolute;top:200px;left:50%;width:1130px;margin-left:-565px;}
+.about-text-box p{float:left;padding:20px;width:320px;height:350px;background:rgba(255,255,255,.5);line-height:30px;text-indent:2em;letter-spacing:0.3em;}
+.about-sale-content{position:relative;height:716px;background:url(../images/about/04.png);background-size:cover;}
+.sale-item{position:absolute;width:470px;top:450px;}
+.item1{left:127px;}
+.item2{left:670px;}
+.sale-item h4{font-size:30px;color:#145bb5;text-align:center;border-bottom:1px solid #333;line-height:70px;}
+.sale-item p{line-height:40px;text-indent:2em;}
+.about-bm05{height:611px;background:url(../images/about/05.png) center center no-repeat;background-size:cover;}
+.about-bm06{height:845px;background:url(../images/about/06.png) center center no-repeat;background-size:cover;}
+/* join 加入我们*/
+.about-join-title{height:309px;background:url(../images/about/07.png) center center no-repeat;background-size:cover;}
+.about-join-nav{width:600px;}
+.about-join-nav ul li{float:left;margin-left:73px;margin-top:25px;width:190px;height:64px;background:#145bb5;text-align:center;line-height:64px;color:#fff;font-size:20px;cursor:pointer;}
+.about-join-nav ul li.current{background:#ffcc00;}
+.about-join-nav ul li:hover{background:#ffcc00;}
+.about-join-content{padding-top:25px;width:600px;font-size:14px;line-height:30px;}
+.join-content-item h3{font-size:20px;}
+.join-content-item p{text-indent:2em;}
+/*联系我们*/
+.contact{text-align:center;}
+.contact-title{padding:30px 0;line-height:35px;}
+.contact h5{font-size:24px;color:#145bb5;}
+
+.contact-style{margin:0 auto;width:1044px;height:68px;border-right:1px solid #e6e7e8;border-bottom:1px solid #e6e7e8;}
+.contact-style li{float:left;padding-left:60px;padding-top:13px;width:200px;height:54px;border-top:1px solid #e6e7e8;border-left:1px solid #e6e7e8;font-size:16px;text-align:left;}
+.style1{background:url(../images/about/tel.png) 10px center no-repeat;}
+.style2{background:url(../images/about/email.png) 10px center no-repeat;}
+.style3{background:url(../images/about/qq.png) 10px center no-repeat;}
+.style4{background:url(../images/about/wechat.png) 10px center no-repeat;}
+/*about.html 关于我们  结束*/
+
+/*bbs.html 北云论坛 开始*/
+.bbs-banner{background:url(../images/bbs/02.jpg) center center no-repeat;background-size:cover;}
+.bbs-banner .warp{height:370px;background:url(../images/bbs/01.png) center bottom no-repeat;}
+/*咨询和动态*/
+.bbs-item{margin:0 20px;width:360px;height:360px;background:#eee;}
+.bbs-item-t{border-bottom:1px dashed #666;}
+.item-title{border-bottom:1px solid #145bb5;}
+.item-title span{display:inline-block;width:145px;height:30px;background:#145bb5;color:#fff;text-align:center;font-size:16px;line-height:30px;}
+.item-title>a{padding-top:13px;font-size:12px;font-style: italic;font-weight:lighter;}
+.item-title>a:hover{color:#f00;}
+.art-title{line-height:50px;font-size:18px;text-align:center;color:#003368;}
+.art-content{line-height:30px;text-indent:2em;}
+.bbs-item-b p{height:35px;line-height:35px;}
+.bbs-item-t>p,.bbs-item-b>p{padding:0 10px;}
+/*loop轮播*/
+.loop-box{position:relative;overflow:hidden;background:#eee;}
+.dots{position:absolute;z-index: 2;top:320px;left:50%;margin-left:-62px;width:125px;}
+.dots li{float:left;width:15px;height:15px;background:#000;border-radius:50%;margin:5px;}
+.dots li.current{background:#fff;}
+.loop-box a:hover{background:rgba(255,255,255,0.8)}
+.loop-prve,.loop-next{position:absolute;top:150px;width:30px;height:30px;line-height:30px;text-align: center;color:#fff;background:rgba(255,255,255,.4);font-size:30px;}
+.loop-prve{left:0;}
+.loop-next{right:0;}
+/*广告条*/
+.add{height:155px;background:url(../images/bbs/03_add.jpg) 0 0 no-repeat;}
+/* topic 每日话题*/
+.topic{width:860px;height:470px;}
+.author-text{padding:30px;width:454px;height:165px;}
+.topic-b>p{float:left;width:350px;height:30px;padding-left:50px;}
+.topic-b>p .fr{font-size:12px;line-height:30px;}
+.rside{border:1px solid #eee;padding:0 15px;}
+.rside-item{width:265px;height:235px;}
+.rside-item h6{padding-top:10px;border-bottom:1px solid #b4c9e4;font-size:16px;}
+.rside-item h6 a{font-size:12px;font-weight:lighter;font-style:italic;padding-top:5px;}
+.rside-item p{padding:8px 0;}
+.num-pic{display:inline-block;width:20px;height:20px;background:#145bb5;color:#fff;text-align:center;margin-right:5px;}
+.bbs-link-box{padding-top:95px;width:860px;height:358px;background:url(../images/bbs/10.jpg) 0 0 no-repeat;text-align:center;}
+.min-rside .rside-item{height:180px;}
+.min-rside .rside-item p{padding:3px 0;}
+/*bbs.html 北云论坛 结束*/
+
+/*art  文章页面 开始*/
+.article{padding:40px 130px;}
+.article h2{font-size:36px;text-align:center;padding:10px 0;}
+p.pic{text-align:center;}
+.article p{font-size:16px;text-indent:2em;line-height:40px;letter-spacing: 2px;}
+.article .art-origin{text-align:right;font-size:12px;}
+/*art  文章页面 结束*/
+/*work.html 就业案例*/
+.work-bm01{height:386px;background:url(../images/work/01.jpg) center center no-repeat;background-size:cover;}
+.work-work-info{height:481px;}
+.work-work-info h1,.work-stu-speak h1,.work-to-company h1{text-align:center;font-size:40px;}
+.work-time-list li{float:left;margin:0 5px;width:90px;height:40px;line-height:40px;font-size:18px;background:#b4c9e4;text-align:center;cursor:pointer;}
+.work-time-list li:hover,.work-time-list li.current{background:#145bb5;color:#fff;}
+.work-work-info .tab td{padding:0;width:150px;}
+/* work-stu-speak 学员感言*/
+.work-stu-speak{height:1140px;}
+.work-stu-speak>p{text-align:center;font-size:16px;}
+.work-stu-words{position:relative;top:40px;}
+.words-item,.words-item-l,.words-item-r{position:absolute;}
+.words-item{width:582px;height:474px;background:url(../images/work/02.png) 0 0 no-repeat;}
+.words-item>div{position:absolute;}
+.words-item1{top:0;left:9px;}
+.words-item2{top:0;left:609px;}
+.words-item3{top:500px;left:9px;}
+.words-item4{top:500px;left:609px;}
+.words-item-l,.words-item-r{padding:10px;width:243px;height:470px;}
+.words-item-l p{line-height:37px;}
+.words-item-l{top:0;left:0;}
+.words-item-r{top:0;left:320px;}
+.words-item-r p{padding-top:30px;text-indent:2em;line-height:40px;}
+.work-to-company>div{background: #f7f5f6;padding:20px 0;}
+.work-to-company>div>img{width:250px;margin-left:35px;cursor:pointer;}
+/*work.html  就业案例*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

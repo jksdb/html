@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.screen{
+			width: 296px;
+			height: 297px;
+			overflow: hidden;
+			margin: 0 auto;
+			position: relative;
+		}
+		li{
+			list-style: none;
+			position: absolute;
+		}
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.l1{
+	    -moz-animation:cycle 25s linear infinite;	
+	    -webkit-animation:cycle 25s linear infinite;		
+	 	}
+	   .l2{
+	    -moz-animation:cycletwo 25s linear infinite;
+	    -webkit-animation:cycletwo 25s linear infinite;		
+		}
+	   .l3{
+	    -moz-animation:cyclethree 25s linear infinite;
+	    -webkit-animation:cyclethree 25s linear infinite;		
+		}
+	   .l4{
+	    -moz-animation:cyclefour 25s linear infinite;
+	    -webkit-animation:cyclefour 25s linear infinite;		
+		}
+	    .l5{
+	    -moz-animation:cyclefive 25s linear infinite;
+	    -webkit-animation:cyclefive 25s linear infinite;		
+		}
+		@-webkit-keyframes cycle {
+		0%  { top:0px; }
+		4%  { top:0px; }
+		16% { top:0px; opacity:1; z-index:0; } 
+		20% { top:297px; opacity:0; z-index:0; }
+		21% { top:-297px; opacity:0; z-index:-1; }
+		50% { top:-297px; opacity:0; z-index:-1; }
+		92% { top:-297px; opacity:0; z-index:0; }
+		96% { top:-297px; opacity:0; }
+		100%{ top:0px; opacity:1; }
+	
+		}
+		@-webkit-keyframes cycletwo {
+		0%  { top:-297px; opacity:0; }
+		16% { top:-297px; opacity:0; }
+		20% { top:0px; opacity:1; }
+		24% { top:0px; opacity:1; } 
+		36% { top:0px; opacity:1; z-index:0; } 
+		40% { top:297px; opacity:0; z-index:0; }
+		41% { top:-297px; opacity:0; z-index:-1; }  
+		100%{ top:-297px; opacity:0; z-index:-1; }
+		}
+		@-webkit-keyframes cyclethree {
+		0%  { top:-297px; opacity:0; }
+		36% { top:-297px;; opacity:0; }
+		40% { top:0px; opacity:1; }
+		44% { top:0px; opacity:1; } 
+		56% { top:0px; opacity:1; z-index:0; } 
+		60% { top:297px; opacity:0; z-index:0; } 
+		61% { top:-297px; opacity:0; z-index:-1; }
+		100%{ top:-297px; opacity:0; z-index:-1; }
+		}
+		@-webkit-keyframes cyclefour {
+		0%  { top:-297px; opacity:0; }
+		56% { top:-297px; opacity:0; }
+		60% { top:0px; opacity:1; }
+		64% { top:0px; opacity:1; }
+		76% { top:0px; opacity:1; z-index:0; }
+		80% { top:297px; opacity:0; z-index:0; }
+		81% { top:-297px; opacity:0; z-index:-1; }
+		100%{ top:-297px; opacity:0; z-index:-1; }
+		}
+		@-webkit-keyframes cyclefive {
+		0%  { top:-297px; opacity:0; }
+		76% { top:-297px; opacity:0; }
+		80% { top:0px; opacity:1; }
+		84% { top:0px; opacity:1; }
+		96% { top:0px; opacity:1; z-index:0; }
+		100%{ top:297px; opacity:0; z-index:0; }
+		}
+		
+		@-webkit-keyframes fullexpand {
+   		 0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
+   		 4%, 24%, 44%, 64%, 84% { width:0%; opacity:0.3; }
+  		 16%, 36%, 56%, 76%, 96% { width:100%; opacity:0.7; }
+  		 17%, 37%, 57%, 77%, 97% { width:100%; opacity:0.3; }
+  		 18%, 38%, 58%, 78%, 98% { width:100%; opacity:0; }	
+		}
+		.progress{
+			position: absolute;
+			bottom: 0px;
+			width: 296px;
+			height: 5px;
+			background-color: rgb(0,0,0);
+			z-index: 3;
+			-webkit-animation:fullexpand 25s ease-out infinite;
+		}
+		.screen:hover li, 
+			.screen:hover .progress{
+	-moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+	</style>
+</head>
+<body>
+	<div class="screen">
+		<ul>
+			<li class="l1"><img src="../image/barni/tu1.png"></li>
+			<li class="l2"><img src="../image/barni/tu2.png"></li>
+			<li class="l3"><img src="../image/barni/tu3.png"></li>
+			<li class="l4"><img src="../image/barni/tu4.png"></li>
+			<li class="l5"><img src="../image/barni/tu5.png"></li>
+
+		</ul>
+		<div class="progress"></div>
+	</div>
+</body>
+</html>

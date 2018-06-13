@@ -1,0 +1,68 @@
+@charset "utf-8";
+/*reset*/
+body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,select,textarea,button,th,td,blockquote,address,pre,a,div,img{margin:0;padding:0;}
+body{font-family:"微软雅黑";overflow:auto;min-width:1200px;background-color:#fff;color:#666;}
+h1,h2,h3,h4,h5,h6,input,textarea,select,button,label{font-size:100%;vertical-align:middle;}
+ul,dl,ol{list-style:outside none none;}
+i{font-style:normal;}
+a{text-decoration: none;cursor:pointer;outline:0;color:#666;}
+a:hover{text-decoration: none;}
+img,fieldset{border:none;}
+img{overflow:hidden;}
+em,address{font-style:normal;}
+button{cursor:pointer;}
+input{outline:none; color:#666;font-size:14px;}
+td{border:0;outline:0;}
+.clearfix:after { content: "";display: block;height: 0;clear: both;visibility: hidden; }
+.clearfix {zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+/* 公用 */
+.warp{width:1200px;margin:0 auto;}
+.none{display:none;}
+.red{color:red;}
+.mt40{margin-top:40px;}
+.mlr25{margin:0 25px;}
+.mlr30{margin:0 30px;}
+.pt10{padding-top:10px;}
+.pt20{padding-top:20px;}
+.pt40{padding-top:40px;}
+.pt60{padding-top:60px;}
+.pt80{padding-top:80px;}
+.pt130{padding-top:130px;}
+.pt160{padding-top:160px;}
+.font18{font-size:18px;}
+.font20{font-size:20px;}
+.font58{font-size:58px;}
+.font88{font-size:58px;}
+.col-fff{color:#fff;}
+.col-f15a21{color:#f15a21;}
+.col-145bb5{color:#145bb5;}
+.bg-f9f9f9{background:#f9f9f9;}
+/* mousego  鼠标跟随 */
+#mousego{position:absolute;z-index: 20;}
+#mousego>div{width:50px;height:40px;position:absolute;margin-left:30px;margin-top:30px;}
+/*header*/
+.header{position:relative;height:138px;font-size:12px;}
+
+.tel-num{padding:25px 64px 13px 0;text-align:right;}
+.gifImg{position:absolute;top:0;left:140px;}
+.logo-item{display:table-cell;padding:0 60px;height:68px;vertical-align:middle;}
+.logo-item>img{vertical-align:middle;}
+
+/*nav*/
+.nav{height:37px;background:rgb(20,91,181);font-size:16px;}
+.nav-list{margin:0 auto;width:990px;height:38px;}
+.nav ul li{float:left;}
+.nav ul li a{display:block;padding:8px 25px; color: #fff;}
+.nav ul li a:hover{background:rgb(78,155,252);}
+.navCurrent{background:rgb(78,155,252);}
+
+/* footer */
+.footer-t{height:30px;min-width: 1200px;background: url(../images/fmln.GIF) repeat-x;}
+.footer-m{height:370px;background:rgb(34,30,31);text-align:center;}
+.footer-m-l{width:370px;}
+.footer-m-r{padding-top:130px;text-align:left;}
+.footer-m-r p,.footer-m-r p a{color:#fff;}
+.footer-m-r p .shu {margin:0 30px;}
+.footer-m-l .pt20 img{width:115px;height:115px;}
