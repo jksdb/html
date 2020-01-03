@@ -6,6 +6,10 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
+#jianliwei{
+	position: absolute;
+	bottom: 0;
+}
 h1 {
 	font-weight: 700;
 }
